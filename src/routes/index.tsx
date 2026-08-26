@@ -378,7 +378,7 @@ function Index() {
           <p className="text-[11px] uppercase tracking-[0.3em] text-accent">Our Services</p>
           <div className="rule-gold mt-4" />
           <h2 className="mt-6 max-w-2xl font-display text-3xl sm:text-5xl">
-            Every discipline your build needs, under one roof.
+            Every discipline your project needs, under one roof.
           </h2>
         </Reveal>
 
