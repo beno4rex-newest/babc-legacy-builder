@@ -139,6 +139,30 @@ const TESTIMONIALS = [
     name: "Ifeanyi Okeke",
     role: "Estate Developer, Enugu",
   },
+  {
+    quote:
+      "I needed a modern bungalow on a tight plot and they maximized every inch. The natural lighting and storage spaces are excellent.",
+    name: "Dr. Ngozi Mbamalu",
+    role: "Homeowner, Onitsha",
+  },
+  {
+    quote:
+      "Their team supervised the roofing and electrical works with precision. No shortcuts, no hidden costs — just honest construction.",
+    name: "Engineer Chidi Obasi",
+    role: "Civil Engineer & Client, Abuja",
+  },
+  {
+    quote:
+      "We gave them an abandoned project and they revived it beautifully. Today it is the most talked-about duplex on our street.",
+    name: "Sir Kenneth Ude",
+    role: "Homeowner, Owerri",
+  },
+  {
+    quote:
+      "From the 3D render to the final paint job, B.A.B.C kept their word. I have already recommended them to two family members.",
+    name: "Mrs. Yemisi Adeleke",
+    role: "Business Owner, Lagos",
+  },
 ];
 
 const STATS = [
