@@ -43,6 +43,7 @@ const p10 = "/images/p10.jpeg";
 const p11 = "/images/p11.jpeg";
 const advertVideo = "/videos/babc-advert.mp4";
 const COMPANY_NAME = "BIG-WIG ARCHITECTURE AND BUILDING CONSTRUCTION";
+const CEO_NAME = "Engineer Hillary Ifechukwudere Kwam";
 const CAC_NUMBER = "7051820";
 const CAC_ADDRESS = "91 Meze Ogocha Crescent, Asaba, Delta State";
 const CAC_DATE = "13 July 2023";
@@ -586,12 +587,20 @@ function Index() {
             </Reveal>
             <Reveal delay={100}>
               <article className="border border-accent/30 bg-ink/30 p-7">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-accent">Leadership</p>
+                <h3 className="mt-5 font-display text-2xl">{CEO_NAME}</h3>
+                <p className="mt-2 text-sm text-primary-foreground/70">Chief Executive Officer</p>
+                <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">Leading B.A.B.C with a commitment to thoughtful design, sound construction and lasting value.</p>
+              </article>
+            </Reveal>
+            <Reveal delay={200}>
+              <article className="border border-accent/30 bg-ink/30 p-7">
                 <ShieldCheck className="h-7 w-7 text-accent" strokeWidth={1.4} />
                 <h3 className="mt-5 font-display text-2xl">Professional delivery</h3>
                 <p className="mt-3 text-sm leading-relaxed text-primary-foreground/70">Transparent costing, milestone reporting and disciplined site supervision.</p>
               </article>
             </Reveal>
-            <Reveal delay={200}>
+            <Reveal delay={300}>
               <article className="border border-accent/30 bg-ink/30 p-7">
                 <Building2 className="h-7 w-7 text-accent" strokeWidth={1.4} />
                 <h3 className="mt-5 font-display text-2xl">Company profile</h3>
