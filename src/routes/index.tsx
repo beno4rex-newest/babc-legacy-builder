@@ -49,8 +49,6 @@ export const Route = createFileRoute("/")({
         content:
           "Premium Nigerian architecture and building construction. Design, build and finish with B.A.B.C — from vision to legacy.",
       },
-      { property: "og:image", content: `https://babc.example${p9.url}` },
-      { name: "twitter:image", content: `https://babc.example${p9.url}` },
     ],
   }),
   component: Index,
