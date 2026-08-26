@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   Building2,
   CheckCircle2,
+  ChevronDown,
   Compass,
   Eye,
   HardHat,
@@ -213,6 +214,8 @@ function Index() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<(typeof PROJECTS)[number] | null>(null);
   const [certificateOpen, setCertificateOpen] = useState(false);
+  const [faqOpen, setFaqOpen] = useState(false);
+  const [activeFaq, setActiveFaq] = useState<string | null>(null);
   const visibleProjects =
     activeCategory === "All"
       ? PROJECTS
@@ -651,14 +654,36 @@ function Index() {
           <div className="rule-gold mt-4" />
           <h2 className="mt-6 max-w-2xl font-display text-3xl sm:text-5xl">Straight answers before we break ground.</h2>
         </Reveal>
-        <div className="mt-12 grid gap-3 lg:grid-cols-2">
-          {FAQS.map((faq) => (
-            <details key={faq.question} className="group border border-border bg-card px-6 py-5">
-              <summary className="cursor-pointer list-none pr-8 font-display text-lg marker:hidden group-open:text-accent">{faq.question}</summary>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
-            </details>
-          ))}
-        </div>
+        <button
+          type="button"
+          onClick={() => setFaqOpen((open) => !open)}
+          aria-expanded={faqOpen}
+          className="mt-12 inline-flex w-full items-center justify-between border border-border bg-card px-5 py-4 text-left text-sm font-medium transition-colors hover:border-accent hover:text-accent sm:w-auto sm:min-w-80"
+        >
+          {faqOpen ? "Hide frequently asked questions" : "View frequently asked questions"}
+          <ChevronDown className={`h-4 w-4 transition-transform ${faqOpen ? "rotate-180" : ""}`} />
+        </button>
+        {faqOpen && (
+          <div className="mt-3 grid gap-3 lg:grid-cols-2">
+            {FAQS.map((faq) => {
+              const isActive = activeFaq === faq.question;
+              return (
+                <div key={faq.question} className="border border-border bg-card">
+                  <button
+                    type="button"
+                    onClick={() => setActiveFaq(isActive ? null : faq.question)}
+                    aria-expanded={isActive}
+                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg hover:text-accent"
+                  >
+                    {faq.question}
+                    <ChevronDown className={`h-4 w-4 shrink-0 transition-transform ${isActive ? "rotate-180 text-accent" : ""}`} />
+                  </button>
+                  {isActive && <p className="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       {/* Quote / Contact */}
