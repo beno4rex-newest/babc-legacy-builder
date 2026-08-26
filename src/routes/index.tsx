@@ -435,20 +435,25 @@ function Index() {
             <h2 className="mt-6 max-w-2xl font-display text-3xl sm:text-5xl">Building across 24 states.</h2>
             <p className="mt-5 max-w-xl text-muted-foreground">From initial site inspection to final handover, our team supports projects across Nigeria.</p>
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-3 lg:grid-cols-6">
+          <details className="group mt-10 sm:hidden">
+            <summary className="flex cursor-pointer list-none items-center justify-between border border-border bg-card px-5 py-4 text-sm font-medium marker:hidden">
+              View 24 service areas
+              <span className="text-accent transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div className="grid grid-cols-2 gap-x-5 gap-y-2 border-x border-b border-border px-5 py-4 text-sm">
+              {SERVICE_AREAS.map((state) => (
+                <div key={state} className="flex items-center gap-2 py-1 text-muted-foreground">
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-accent" /> {state}
+                </div>
+              ))}
+            </div>
+          </details>
+          <div className="mt-10 hidden grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid sm:grid-cols-3 lg:grid-cols-6">
             {SERVICE_AREAS.map((state) => (
               <div key={state} className="flex items-center gap-2 border-b border-border/60 py-2 text-muted-foreground">
                 <CheckCircle2 className="h-4 w-4 shrink-0 text-accent" /> {state}
               </div>
             ))}
-          </div>
-          <div className="mt-10 overflow-hidden border border-border bg-card">
-            <iframe
-              title="B.A.B.C service area map of Nigeria"
-              src="https://www.google.com/maps?q=Nigeria&output=embed"
-              loading="lazy"
-              className="h-72 w-full border-0 grayscale-[0.35] sm:h-96"
-            />
           </div>
         </div>
       </section>
