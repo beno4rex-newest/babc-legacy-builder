@@ -179,46 +179,24 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    quote:
-      "B.A.B.C delivered my duplex three weeks ahead of schedule. The finishing quality is better than what I saw in the drawings.",
+    quote: "I was impressed by how involved they stayed from the first day to the handover. The finishing came out even better than I expected.",
     name: "Chief Emeka Onyema",
     role: "Homeowner, Awka",
   },
   {
-    quote:
-      "What impressed me most was the reporting. I was abroad throughout the build and never felt out of touch for a single week.",
+    quote: "I live abroad, so regular updates were very important to me. B.A.B.C kept me informed and made the whole process feel manageable.",
     name: "Mrs. Adaeze Nwosu",
     role: "Diaspora Client, Houston",
   },
   {
-    quote:
-      "They handled our terrace project end-to-end — design, approvals and construction. Professional from the first site visit.",
+    quote: "They handled the design, approvals and construction for our terrace project. I always knew what stage we were at and what came next.",
     name: "Ifeanyi Okeke",
     role: "Estate Developer, Enugu",
   },
   {
-    quote:
-      "I needed a modern bungalow on a tight plot and they maximized every inch. The natural lighting and storage spaces are excellent.",
+    quote: "My plot was not very large, but they made good use of every part of it. The house feels spacious, bright and practical.",
     name: "Dr. Ngozi Mbamalu",
     role: "Homeowner, Onitsha",
-  },
-  {
-    quote:
-      "Their team supervised the roofing and electrical works with precision. No shortcuts, no hidden costs — just honest construction.",
-    name: "Engineer Chidi Obasi",
-    role: "Civil Engineer & Client, Abuja",
-  },
-  {
-    quote:
-      "We gave them an abandoned project and they revived it beautifully. Today it is the most talked-about duplex on our street.",
-    name: "Sir Kenneth Ude",
-    role: "Homeowner, Owerri",
-  },
-  {
-    quote:
-      "From the 3D render to the final paint job, B.A.B.C kept their word. I have already recommended them to two family members.",
-    name: "Mrs. Yemisi Adeleke",
-    role: "Business Owner, Lagos",
   },
 ];
 
